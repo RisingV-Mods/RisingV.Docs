@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class MultiFileDataSource&lt;TKey, TData, TLoader&gt; | RisingV.Shared </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class MultiFileDataSource&lt;TKey, TData, TLoader&gt; | RisingV.Shared ">
+      
+      <meta name="description" content="Represents a multi-file data source that scans all plugin directories for matching database files and merges them. Files are loaded in alphabetical order by plugin name, with later files overwriting earlier ones on key conflicts.">
+      <link rel="icon" href="../assets/favicon/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/RisingV-Mods/RisingV.Shared/new/main/apiSpec/new?filename=RisingV_Shared_Databases_Sources_MultiFileDataSource_3.md&amp;value=---%0Auid%3A%20RisingV.Shared.Databases.Sources.MultiFileDataSource%603%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/images/logo_50.png" alt="RisingV.Shared">
+            RisingV.Shared
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="RisingV.Shared.Databases.Sources.MultiFileDataSource`3">
+
+
+
+  <h1 id="RisingV_Shared_Databases_Sources_MultiFileDataSource_3" data-uid="RisingV.Shared.Databases.Sources.MultiFileDataSource`3" class="text-break">
+Class MultiFileDataSource&lt;TKey, TData, TLoader&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Databases/Sources/MultiFileDataSource.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="RisingV.html">RisingV</a>.<a class="xref" href="RisingV.Shared.html">Shared</a>.<a class="xref" href="RisingV.Shared.Databases.html">Databases</a>.<a class="xref" href="RisingV.Shared.Databases.Sources.html">Sources</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>RisingV.Shared.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents a multi-file data source that scans all plugin directories for matching database files and merges them.
+Files are loaded in alphabetical order by plugin name, with later files overwriting earlier ones on key conflicts.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class MultiFileDataSource&lt;TKey, TData, TLoader&gt; : MapDataSource&lt;TKey, TData, TLoader&gt;, IDataSource&lt;TKey, TData, TLoader&gt;, IDataSource&lt;TKey, TData&gt;, IDataSource, IDataCrud, IDataCrud&lt;TKey, TData&gt; where TKey : notnull where TData : IData where TLoader : IDataStreamLoader&lt;TKey, TData&gt;</code></pre>
+  </div>
+
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TKey</code></dt>
+    <dd><p>Key type for the data source, must be not null.</p>
+</dd>
+    <dt><code>TData</code></dt>
+    <dd><p>Data type for the data source, must implement IData interface.</p>
+</dd>
+    <dt><code>TLoader</code></dt>
+    <dd><p>Loader type for the data source, must implement IDataStreamLoader interface.</p>
+</dd>
+  </dl>
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="RisingV.Shared.Databases.Sources.DataSource-3.html">DataSource</a>&lt;TKey, TData, TLoader&gt;</div>
+      <div><a class="xref" href="RisingV.Shared.Databases.Sources.MapDataSource-3.html">MapDataSource</a>&lt;TKey, TData, TLoader&gt;</div>
+      <div><span class="xref">MultiFileDataSource&lt;TKey, TData, TLoader&gt;</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="RisingV.Shared.Databases.Sources.IDataSource-3.html">IDataSource</a>&lt;TKey, TData, TLoader&gt;</div>
+      <div><a class="xref" href="RisingV.Shared.Databases.Sources.IDataSource-2.html">IDataSource</a>&lt;TKey, TData&gt;</div>
+      <div><a class="xref" href="RisingV.Shared.Databases.Sources.IDataSource.html">IDataSource</a></div>
+      <div><a class="xref" href="RisingV.Shared.Databases.Sources.IDataCrud.html">IDataCrud</a></div>
+      <div><a class="xref" href="RisingV.Shared.Databases.Sources.IDataCrud-2.html">IDataCrud</a>&lt;TKey, TData&gt;</div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Sources.MapDataSource-3.html#RisingV_Shared_Databases_Sources_MapDataSource_3_Log">MapDataSource&lt;TKey, TData, TLoader&gt;.Log</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Sources.MapDataSource-3.html#RisingV_Shared_Databases_Sources_MapDataSource_3_KeyResolver">MapDataSource&lt;TKey, TData, TLoader&gt;.KeyResolver</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Sources.MapDataSource-3.html#RisingV_Shared_Databases_Sources_MapDataSource_3_Initialize_RisingV_Shared_Databases_IDatabase__0__1__">MapDataSource&lt;TKey, TData, TLoader&gt;.Initialize(IDatabase&lt;TKey, TData&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Sources.MapDataSource-3.html#RisingV_Shared_Databases_Sources_MapDataSource_3_Load_RisingV_Shared_Databases_IDatabase__0__1___2_">MapDataSource&lt;TKey, TData, TLoader&gt;.Load(IDatabase&lt;TKey, TData&gt;, TLoader)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Sources.MapDataSource-3.html#RisingV_Shared_Databases_Sources_MapDataSource_3_Ready_RisingV_Shared_Databases_IDatabase__0__1__">MapDataSource&lt;TKey, TData, TLoader&gt;.Ready(IDatabase&lt;TKey, TData&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Sources.MapDataSource-3.html#RisingV_Shared_Databases_Sources_MapDataSource_3_Verify_RisingV_Shared_Databases_IDatabase__0__1__">MapDataSource&lt;TKey, TData, TLoader&gt;.Verify(IDatabase&lt;TKey, TData&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Sources.MapDataSource-3.html#RisingV_Shared_Databases_Sources_MapDataSource_3_Unload_RisingV_Shared_Databases_IDatabase__0__1__">MapDataSource&lt;TKey, TData, TLoader&gt;.Unload(IDatabase&lt;TKey, TData&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Sources.MapDataSource-3.html#RisingV_Shared_Databases_Sources_MapDataSource_3_Terminate_RisingV_Shared_Databases_IDatabase__0__1__">MapDataSource&lt;TKey, TData, TLoader&gt;.Terminate(IDatabase&lt;TKey, TData&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Sources.MapDataSource-3.html#RisingV_Shared_Databases_Sources_MapDataSource_3_Clear">MapDataSource&lt;TKey, TData, TLoader&gt;.Clear()</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Sources.MapDataSource-3.html#RisingV_Shared_Databases_Sources_MapDataSource_3_Count">MapDataSource&lt;TKey, TData, TLoader&gt;.Count()</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Sources.MapDataSource-3.html#RisingV_Shared_Databases_Sources_MapDataSource_3_Get__0_">MapDataSource&lt;TKey, TData, TLoader&gt;.Get(TKey)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Sources.MapDataSource-3.html#RisingV_Shared_Databases_Sources_MapDataSource_3_TryGet__0_">MapDataSource&lt;TKey, TData, TLoader&gt;.TryGet(TKey)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Sources.MapDataSource-3.html#RisingV_Shared_Databases_Sources_MapDataSource_3_GetAll">MapDataSource&lt;TKey, TData, TLoader&gt;.GetAll()</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Sources.MapDataSource-3.html#RisingV_Shared_Databases_Sources_MapDataSource_3_ForEach_System_Action__0__1__">MapDataSource&lt;TKey, TData, TLoader&gt;.ForEach(Action&lt;TKey, TData&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Sources.MapDataSource-3.html#RisingV_Shared_Databases_Sources_MapDataSource_3_Add__0__1_">MapDataSource&lt;TKey, TData, TLoader&gt;.Add(TKey, TData)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Sources.MapDataSource-3.html#RisingV_Shared_Databases_Sources_MapDataSource_3_Remove__0_">MapDataSource&lt;TKey, TData, TLoader&gt;.Remove(TKey)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Sources.MapDataSource-3.html#RisingV_Shared_Databases_Sources_MapDataSource_3_Equals_System_Object_">MapDataSource&lt;TKey, TData, TLoader&gt;.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Sources.MapDataSource-3.html#RisingV_Shared_Databases_Sources_MapDataSource_3_GetHashCode">MapDataSource&lt;TKey, TData, TLoader&gt;.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Sources.MapDataSource-3.html#RisingV_Shared_Databases_Sources_MapDataSource_3_ToString">MapDataSource&lt;TKey, TData, TLoader&gt;.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Sources.DataSource-3.html#RisingV_Shared_Databases_Sources_DataSource_3_Log">DataSource&lt;TKey, TData, TLoader&gt;.Log</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Sources.DataSource-3.html#RisingV_Shared_Databases_Sources_DataSource_3_IsInitialized">DataSource&lt;TKey, TData, TLoader&gt;.IsInitialized</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Sources.DataSource-3.html#RisingV_Shared_Databases_Sources_DataSource_3_IsLoaded">DataSource&lt;TKey, TData, TLoader&gt;.IsLoaded</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Sources.DataSource-3.html#RisingV_Shared_Databases_Sources_DataSource_3_KeyResolver">DataSource&lt;TKey, TData, TLoader&gt;.KeyResolver</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Sources.DataSource-3.html#RisingV_Shared_Databases_Sources_DataSource_3_Initialize_RisingV_Shared_Databases_IDatabase__0__1__">DataSource&lt;TKey, TData, TLoader&gt;.Initialize(IDatabase&lt;TKey, TData&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Sources.DataSource-3.html#RisingV_Shared_Databases_Sources_DataSource_3_Terminate_RisingV_Shared_Databases_IDatabase__0__1__">DataSource&lt;TKey, TData, TLoader&gt;.Terminate(IDatabase&lt;TKey, TData&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Sources.DataSource-3.html#RisingV_Shared_Databases_Sources_DataSource_3_Load_RisingV_Shared_Databases_IDatabase__0__1___2_">DataSource&lt;TKey, TData, TLoader&gt;.Load(IDatabase&lt;TKey, TData&gt;, TLoader)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Sources.DataSource-3.html#RisingV_Shared_Databases_Sources_DataSource_3_Unload_RisingV_Shared_Databases_IDatabase__0__1__">DataSource&lt;TKey, TData, TLoader&gt;.Unload(IDatabase&lt;TKey, TData&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Sources.DataSource-3.html#RisingV_Shared_Databases_Sources_DataSource_3_Verify_RisingV_Shared_Databases_IDatabase__0__1__">DataSource&lt;TKey, TData, TLoader&gt;.Verify(IDatabase&lt;TKey, TData&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Sources.DataSource-3.html#RisingV_Shared_Databases_Sources_DataSource_3_Ready_RisingV_Shared_Databases_IDatabase__0__1__">DataSource&lt;TKey, TData, TLoader&gt;.Ready(IDatabase&lt;TKey, TData&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Sources.DataSource-3.html#RisingV_Shared_Databases_Sources_DataSource_3_Clear">DataSource&lt;TKey, TData, TLoader&gt;.Clear()</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Sources.DataSource-3.html#RisingV_Shared_Databases_Sources_DataSource_3_Count">DataSource&lt;TKey, TData, TLoader&gt;.Count()</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Sources.DataSource-3.html#RisingV_Shared_Databases_Sources_DataSource_3_IsEmpty">DataSource&lt;TKey, TData, TLoader&gt;.IsEmpty()</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Sources.DataSource-3.html#RisingV_Shared_Databases_Sources_DataSource_3_Get__0_">DataSource&lt;TKey, TData, TLoader&gt;.Get(TKey)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Sources.DataSource-3.html#RisingV_Shared_Databases_Sources_DataSource_3_TryGet__0_">DataSource&lt;TKey, TData, TLoader&gt;.TryGet(TKey)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Sources.DataSource-3.html#RisingV_Shared_Databases_Sources_DataSource_3_GetAll">DataSource&lt;TKey, TData, TLoader&gt;.GetAll()</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Sources.DataSource-3.html#RisingV_Shared_Databases_Sources_DataSource_3_ForEach_System_Action__0__1__">DataSource&lt;TKey, TData, TLoader&gt;.ForEach(Action&lt;TKey, TData&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Sources.DataSource-3.html#RisingV_Shared_Databases_Sources_DataSource_3_Add__0__1_">DataSource&lt;TKey, TData, TLoader&gt;.Add(TKey, TData)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Sources.DataSource-3.html#RisingV_Shared_Databases_Sources_DataSource_3_Add__1_">DataSource&lt;TKey, TData, TLoader&gt;.Add(TData)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Sources.DataSource-3.html#RisingV_Shared_Databases_Sources_DataSource_3_Item__0_">DataSource&lt;TKey, TData, TLoader&gt;.this[TKey]</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Sources.DataSource-3.html#RisingV_Shared_Databases_Sources_DataSource_3_Remove__0_">DataSource&lt;TKey, TData, TLoader&gt;.Remove(TKey)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="RisingV.Shared.Extensions.EntityExtensions.html#RisingV_Shared_Extensions_EntityExtensions_IsAspect__1_System_Object_">EntityExtensions.IsAspect&lt;TAspect&gt;(object)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="RisingV_Shared_Databases_Sources_MultiFileDataSource_3__ctor_" data-uid="RisingV.Shared.Databases.Sources.MultiFileDataSource`3.#ctor*"></a>
+
+  <h3 id="RisingV_Shared_Databases_Sources_MultiFileDataSource_3__ctor_System_String_System_String_" data-uid="RisingV.Shared.Databases.Sources.MultiFileDataSource`3.#ctor(System.String,System.String)">
+  MultiFileDataSource(string?, string?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Databases/Sources/MultiFileDataSource.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Represents a multi-file data source that scans all plugin directories for matching database files and merges them.
+Files are loaded in alphabetical order by plugin name, with later files overwriting earlier ones on key conflicts.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected MultiFileDataSource(string? fileName = null, string? extension = &quot;json&quot;)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fileName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>File name of the data source, without extension.</p>
+</dd>
+    <dt><code>extension</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>File extension of the data source, default is &quot;json&quot;.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="RisingV_Shared_Databases_Sources_MultiFileDataSource_3_Extension_" data-uid="RisingV.Shared.Databases.Sources.MultiFileDataSource`3.Extension*"></a>
+
+  <h3 id="RisingV_Shared_Databases_Sources_MultiFileDataSource_3_Extension" data-uid="RisingV.Shared.Databases.Sources.MultiFileDataSource`3.Extension">
+  Extension
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Databases/Sources/MultiFileDataSource.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? Extension { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Databases_Sources_MultiFileDataSource_3_FileName_" data-uid="RisingV.Shared.Databases.Sources.MultiFileDataSource`3.FileName*"></a>
+
+  <h3 id="RisingV_Shared_Databases_Sources_MultiFileDataSource_3_FileName" data-uid="RisingV.Shared.Databases.Sources.MultiFileDataSource`3.FileName">
+  FileName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Databases/Sources/MultiFileDataSource.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? FileName { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Databases_Sources_MultiFileDataSource_3_IgnoreMissingFiles_" data-uid="RisingV.Shared.Databases.Sources.MultiFileDataSource`3.IgnoreMissingFiles*"></a>
+
+  <h3 id="RisingV_Shared_Databases_Sources_MultiFileDataSource_3_IgnoreMissingFiles" data-uid="RisingV.Shared.Databases.Sources.MultiFileDataSource`3.IgnoreMissingFiles">
+  IgnoreMissingFiles
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Databases/Sources/MultiFileDataSource.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool IgnoreMissingFiles { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="RisingV_Shared_Databases_Sources_MultiFileDataSource_3_Initialize_" data-uid="RisingV.Shared.Databases.Sources.MultiFileDataSource`3.Initialize*"></a>
+
+  <h3 id="RisingV_Shared_Databases_Sources_MultiFileDataSource_3_Initialize_RisingV_Shared_Databases_IDatabase__0__1__" data-uid="RisingV.Shared.Databases.Sources.MultiFileDataSource`3.Initialize(RisingV.Shared.Databases.IDatabase{`0,`1})">
+  Initialize(IDatabase&lt;TKey, TData&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Databases/Sources/MultiFileDataSource.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Initialize(IDatabase&lt;TKey, TData&gt; database)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>database</code> <a class="xref" href="RisingV.Shared.Databases.IDatabase-2.html">IDatabase</a>&lt;TKey, TData&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Databases_Sources_MultiFileDataSource_3_Load_" data-uid="RisingV.Shared.Databases.Sources.MultiFileDataSource`3.Load*"></a>
+
+  <h3 id="RisingV_Shared_Databases_Sources_MultiFileDataSource_3_Load_RisingV_Shared_Databases_IDatabase__0__1___2_" data-uid="RisingV.Shared.Databases.Sources.MultiFileDataSource`3.Load(RisingV.Shared.Databases.IDatabase{`0,`1},`2)">
+  Load(IDatabase&lt;TKey, TData&gt;, TLoader)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Databases/Sources/MultiFileDataSource.cs/#L92"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Load(IDatabase&lt;TKey, TData&gt; database, TLoader loader)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>database</code> <a class="xref" href="RisingV.Shared.Databases.IDatabase-2.html">IDatabase</a>&lt;TKey, TData&gt;</dt>
+    <dd></dd>
+    <dt><code>loader</code> <span class="xref">TLoader</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Databases_Sources_MultiFileDataSource_3_Verify_" data-uid="RisingV.Shared.Databases.Sources.MultiFileDataSource`3.Verify*"></a>
+
+  <h3 id="RisingV_Shared_Databases_Sources_MultiFileDataSource_3_Verify_RisingV_Shared_Databases_IDatabase__0__1__" data-uid="RisingV.Shared.Databases.Sources.MultiFileDataSource`3.Verify(RisingV.Shared.Databases.IDatabase{`0,`1})">
+  Verify(IDatabase&lt;TKey, TData&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Databases/Sources/MultiFileDataSource.cs/#L70"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Verify(IDatabase&lt;TKey, TData&gt; database)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>database</code> <a class="xref" href="RisingV.Shared.Databases.IDatabase-2.html">IDatabase</a>&lt;TKey, TData&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Databases/Sources/MultiFileDataSource.cs/#L24" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

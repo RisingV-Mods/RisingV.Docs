@@ -4317,6 +4317,19 @@ references:
   commentId: T:RisingV.Shared.Databases.IDataLoader
   fullName: RisingV.Shared.Databases.IDataLoader
   nameWithType: IDataLoader
+- uid: RisingV.Shared.Databases.IDataLoader.LastLoadedCount
+  name: LastLoadedCount
+  href: api/RisingV.Shared.Databases.IDataLoader.html#RisingV_Shared_Databases_IDataLoader_LastLoadedCount
+  commentId: P:RisingV.Shared.Databases.IDataLoader.LastLoadedCount
+  fullName: RisingV.Shared.Databases.IDataLoader.LastLoadedCount
+  nameWithType: IDataLoader.LastLoadedCount
+- uid: RisingV.Shared.Databases.IDataLoader.LastLoadedCount*
+  name: LastLoadedCount
+  href: api/RisingV.Shared.Databases.IDataLoader.html#RisingV_Shared_Databases_IDataLoader_LastLoadedCount_
+  commentId: Overload:RisingV.Shared.Databases.IDataLoader.LastLoadedCount
+  isSpec: "True"
+  fullName: RisingV.Shared.Databases.IDataLoader.LastLoadedCount
+  nameWithType: IDataLoader.LastLoadedCount
 - uid: RisingV.Shared.Databases.IDataLoader`2
   name: IDataLoader<TKey, TData>
   href: api/RisingV.Shared.Databases.IDataLoader-2.html
@@ -4514,6 +4527,23 @@ references:
   fullName.vb: RisingV.Shared.Databases.Loaders.JsonDataLoader(Of TKey, TData)
   nameWithType: JsonDataLoader<TKey, TData>
   nameWithType.vb: JsonDataLoader(Of TKey, TData)
+- uid: RisingV.Shared.Databases.Loaders.JsonDataLoader`2.LastLoadedCount
+  name: LastLoadedCount
+  href: api/RisingV.Shared.Databases.Loaders.JsonDataLoader-2.html#RisingV_Shared_Databases_Loaders_JsonDataLoader_2_LastLoadedCount
+  commentId: P:RisingV.Shared.Databases.Loaders.JsonDataLoader`2.LastLoadedCount
+  fullName: RisingV.Shared.Databases.Loaders.JsonDataLoader<TKey, TData>.LastLoadedCount
+  fullName.vb: RisingV.Shared.Databases.Loaders.JsonDataLoader(Of TKey, TData).LastLoadedCount
+  nameWithType: JsonDataLoader<TKey, TData>.LastLoadedCount
+  nameWithType.vb: JsonDataLoader(Of TKey, TData).LastLoadedCount
+- uid: RisingV.Shared.Databases.Loaders.JsonDataLoader`2.LastLoadedCount*
+  name: LastLoadedCount
+  href: api/RisingV.Shared.Databases.Loaders.JsonDataLoader-2.html#RisingV_Shared_Databases_Loaders_JsonDataLoader_2_LastLoadedCount_
+  commentId: Overload:RisingV.Shared.Databases.Loaders.JsonDataLoader`2.LastLoadedCount
+  isSpec: "True"
+  fullName: RisingV.Shared.Databases.Loaders.JsonDataLoader<TKey, TData>.LastLoadedCount
+  fullName.vb: RisingV.Shared.Databases.Loaders.JsonDataLoader(Of TKey, TData).LastLoadedCount
+  nameWithType: JsonDataLoader<TKey, TData>.LastLoadedCount
+  nameWithType.vb: JsonDataLoader(Of TKey, TData).LastLoadedCount
 - uid: RisingV.Shared.Databases.Loaders.JsonDataLoader`2.Load*
   name: Load
   href: api/RisingV.Shared.Databases.Loaders.JsonDataLoader-2.html#RisingV_Shared_Databases_Loaders_JsonDataLoader_2_Load_
@@ -4541,6 +4571,23 @@ references:
   fullName.vb: RisingV.Shared.Databases.Loaders.MapDataLoader(Of TKey, TData)
   nameWithType: MapDataLoader<TKey, TData>
   nameWithType.vb: MapDataLoader(Of TKey, TData)
+- uid: RisingV.Shared.Databases.Loaders.MapDataLoader`2.LastLoadedCount
+  name: LastLoadedCount
+  href: api/RisingV.Shared.Databases.Loaders.MapDataLoader-2.html#RisingV_Shared_Databases_Loaders_MapDataLoader_2_LastLoadedCount
+  commentId: P:RisingV.Shared.Databases.Loaders.MapDataLoader`2.LastLoadedCount
+  fullName: RisingV.Shared.Databases.Loaders.MapDataLoader<TKey, TData>.LastLoadedCount
+  fullName.vb: RisingV.Shared.Databases.Loaders.MapDataLoader(Of TKey, TData).LastLoadedCount
+  nameWithType: MapDataLoader<TKey, TData>.LastLoadedCount
+  nameWithType.vb: MapDataLoader(Of TKey, TData).LastLoadedCount
+- uid: RisingV.Shared.Databases.Loaders.MapDataLoader`2.LastLoadedCount*
+  name: LastLoadedCount
+  href: api/RisingV.Shared.Databases.Loaders.MapDataLoader-2.html#RisingV_Shared_Databases_Loaders_MapDataLoader_2_LastLoadedCount_
+  commentId: Overload:RisingV.Shared.Databases.Loaders.MapDataLoader`2.LastLoadedCount
+  isSpec: "True"
+  fullName: RisingV.Shared.Databases.Loaders.MapDataLoader<TKey, TData>.LastLoadedCount
+  fullName.vb: RisingV.Shared.Databases.Loaders.MapDataLoader(Of TKey, TData).LastLoadedCount
+  nameWithType: MapDataLoader<TKey, TData>.LastLoadedCount
+  nameWithType.vb: MapDataLoader(Of TKey, TData).LastLoadedCount
 - uid: RisingV.Shared.Databases.Loaders.MapDataLoader`2.Load*
   name: Load
   href: api/RisingV.Shared.Databases.Loaders.MapDataLoader-2.html#RisingV_Shared_Databases_Loaders_MapDataLoader_2_Load_
@@ -5949,6 +5996,139 @@ references:
   fullName.vb: RisingV.Shared.Databases.Sources.MapDataSource(Of TKey, TData, TLoader).Verify
   nameWithType: MapDataSource<TKey, TData, TLoader>.Verify
   nameWithType.vb: MapDataSource(Of TKey, TData, TLoader).Verify
+- uid: RisingV.Shared.Databases.Sources.MultiFileDataSource`3
+  name: MultiFileDataSource<TKey, TData, TLoader>
+  href: api/RisingV.Shared.Databases.Sources.MultiFileDataSource-3.html
+  commentId: T:RisingV.Shared.Databases.Sources.MultiFileDataSource`3
+  name.vb: MultiFileDataSource(Of TKey, TData, TLoader)
+  fullName: RisingV.Shared.Databases.Sources.MultiFileDataSource<TKey, TData, TLoader>
+  fullName.vb: RisingV.Shared.Databases.Sources.MultiFileDataSource(Of TKey, TData, TLoader)
+  nameWithType: MultiFileDataSource<TKey, TData, TLoader>
+  nameWithType.vb: MultiFileDataSource(Of TKey, TData, TLoader)
+- uid: RisingV.Shared.Databases.Sources.MultiFileDataSource`3.#ctor(System.String,System.String)
+  name: MultiFileDataSource(string?, string?)
+  href: api/RisingV.Shared.Databases.Sources.MultiFileDataSource-3.html#RisingV_Shared_Databases_Sources_MultiFileDataSource_3__ctor_System_String_System_String_
+  commentId: M:RisingV.Shared.Databases.Sources.MultiFileDataSource`3.#ctor(System.String,System.String)
+  name.vb: New(String, String)
+  fullName: RisingV.Shared.Databases.Sources.MultiFileDataSource<TKey, TData, TLoader>.MultiFileDataSource(string?, string?)
+  fullName.vb: RisingV.Shared.Databases.Sources.MultiFileDataSource(Of TKey, TData, TLoader).New(String, String)
+  nameWithType: MultiFileDataSource<TKey, TData, TLoader>.MultiFileDataSource(string?, string?)
+  nameWithType.vb: MultiFileDataSource(Of TKey, TData, TLoader).New(String, String)
+- uid: RisingV.Shared.Databases.Sources.MultiFileDataSource`3.#ctor*
+  name: MultiFileDataSource
+  href: api/RisingV.Shared.Databases.Sources.MultiFileDataSource-3.html#RisingV_Shared_Databases_Sources_MultiFileDataSource_3__ctor_
+  commentId: Overload:RisingV.Shared.Databases.Sources.MultiFileDataSource`3.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: RisingV.Shared.Databases.Sources.MultiFileDataSource<TKey, TData, TLoader>.MultiFileDataSource
+  fullName.vb: RisingV.Shared.Databases.Sources.MultiFileDataSource(Of TKey, TData, TLoader).New
+  nameWithType: MultiFileDataSource<TKey, TData, TLoader>.MultiFileDataSource
+  nameWithType.vb: MultiFileDataSource(Of TKey, TData, TLoader).New
+- uid: RisingV.Shared.Databases.Sources.MultiFileDataSource`3.Extension
+  name: Extension
+  href: api/RisingV.Shared.Databases.Sources.MultiFileDataSource-3.html#RisingV_Shared_Databases_Sources_MultiFileDataSource_3_Extension
+  commentId: P:RisingV.Shared.Databases.Sources.MultiFileDataSource`3.Extension
+  fullName: RisingV.Shared.Databases.Sources.MultiFileDataSource<TKey, TData, TLoader>.Extension
+  fullName.vb: RisingV.Shared.Databases.Sources.MultiFileDataSource(Of TKey, TData, TLoader).Extension
+  nameWithType: MultiFileDataSource<TKey, TData, TLoader>.Extension
+  nameWithType.vb: MultiFileDataSource(Of TKey, TData, TLoader).Extension
+- uid: RisingV.Shared.Databases.Sources.MultiFileDataSource`3.Extension*
+  name: Extension
+  href: api/RisingV.Shared.Databases.Sources.MultiFileDataSource-3.html#RisingV_Shared_Databases_Sources_MultiFileDataSource_3_Extension_
+  commentId: Overload:RisingV.Shared.Databases.Sources.MultiFileDataSource`3.Extension
+  isSpec: "True"
+  fullName: RisingV.Shared.Databases.Sources.MultiFileDataSource<TKey, TData, TLoader>.Extension
+  fullName.vb: RisingV.Shared.Databases.Sources.MultiFileDataSource(Of TKey, TData, TLoader).Extension
+  nameWithType: MultiFileDataSource<TKey, TData, TLoader>.Extension
+  nameWithType.vb: MultiFileDataSource(Of TKey, TData, TLoader).Extension
+- uid: RisingV.Shared.Databases.Sources.MultiFileDataSource`3.FileName
+  name: FileName
+  href: api/RisingV.Shared.Databases.Sources.MultiFileDataSource-3.html#RisingV_Shared_Databases_Sources_MultiFileDataSource_3_FileName
+  commentId: P:RisingV.Shared.Databases.Sources.MultiFileDataSource`3.FileName
+  fullName: RisingV.Shared.Databases.Sources.MultiFileDataSource<TKey, TData, TLoader>.FileName
+  fullName.vb: RisingV.Shared.Databases.Sources.MultiFileDataSource(Of TKey, TData, TLoader).FileName
+  nameWithType: MultiFileDataSource<TKey, TData, TLoader>.FileName
+  nameWithType.vb: MultiFileDataSource(Of TKey, TData, TLoader).FileName
+- uid: RisingV.Shared.Databases.Sources.MultiFileDataSource`3.FileName*
+  name: FileName
+  href: api/RisingV.Shared.Databases.Sources.MultiFileDataSource-3.html#RisingV_Shared_Databases_Sources_MultiFileDataSource_3_FileName_
+  commentId: Overload:RisingV.Shared.Databases.Sources.MultiFileDataSource`3.FileName
+  isSpec: "True"
+  fullName: RisingV.Shared.Databases.Sources.MultiFileDataSource<TKey, TData, TLoader>.FileName
+  fullName.vb: RisingV.Shared.Databases.Sources.MultiFileDataSource(Of TKey, TData, TLoader).FileName
+  nameWithType: MultiFileDataSource<TKey, TData, TLoader>.FileName
+  nameWithType.vb: MultiFileDataSource(Of TKey, TData, TLoader).FileName
+- uid: RisingV.Shared.Databases.Sources.MultiFileDataSource`3.IgnoreMissingFiles
+  name: IgnoreMissingFiles
+  href: api/RisingV.Shared.Databases.Sources.MultiFileDataSource-3.html#RisingV_Shared_Databases_Sources_MultiFileDataSource_3_IgnoreMissingFiles
+  commentId: P:RisingV.Shared.Databases.Sources.MultiFileDataSource`3.IgnoreMissingFiles
+  fullName: RisingV.Shared.Databases.Sources.MultiFileDataSource<TKey, TData, TLoader>.IgnoreMissingFiles
+  fullName.vb: RisingV.Shared.Databases.Sources.MultiFileDataSource(Of TKey, TData, TLoader).IgnoreMissingFiles
+  nameWithType: MultiFileDataSource<TKey, TData, TLoader>.IgnoreMissingFiles
+  nameWithType.vb: MultiFileDataSource(Of TKey, TData, TLoader).IgnoreMissingFiles
+- uid: RisingV.Shared.Databases.Sources.MultiFileDataSource`3.IgnoreMissingFiles*
+  name: IgnoreMissingFiles
+  href: api/RisingV.Shared.Databases.Sources.MultiFileDataSource-3.html#RisingV_Shared_Databases_Sources_MultiFileDataSource_3_IgnoreMissingFiles_
+  commentId: Overload:RisingV.Shared.Databases.Sources.MultiFileDataSource`3.IgnoreMissingFiles
+  isSpec: "True"
+  fullName: RisingV.Shared.Databases.Sources.MultiFileDataSource<TKey, TData, TLoader>.IgnoreMissingFiles
+  fullName.vb: RisingV.Shared.Databases.Sources.MultiFileDataSource(Of TKey, TData, TLoader).IgnoreMissingFiles
+  nameWithType: MultiFileDataSource<TKey, TData, TLoader>.IgnoreMissingFiles
+  nameWithType.vb: MultiFileDataSource(Of TKey, TData, TLoader).IgnoreMissingFiles
+- uid: RisingV.Shared.Databases.Sources.MultiFileDataSource`3.Initialize(RisingV.Shared.Databases.IDatabase{`0,`1})
+  name: Initialize(IDatabase<TKey, TData>)
+  href: api/RisingV.Shared.Databases.Sources.MultiFileDataSource-3.html#RisingV_Shared_Databases_Sources_MultiFileDataSource_3_Initialize_RisingV_Shared_Databases_IDatabase__0__1__
+  commentId: M:RisingV.Shared.Databases.Sources.MultiFileDataSource`3.Initialize(RisingV.Shared.Databases.IDatabase{`0,`1})
+  name.vb: Initialize(IDatabase(Of TKey, TData))
+  fullName: RisingV.Shared.Databases.Sources.MultiFileDataSource<TKey, TData, TLoader>.Initialize(RisingV.Shared.Databases.IDatabase<TKey, TData>)
+  fullName.vb: RisingV.Shared.Databases.Sources.MultiFileDataSource(Of TKey, TData, TLoader).Initialize(RisingV.Shared.Databases.IDatabase(Of TKey, TData))
+  nameWithType: MultiFileDataSource<TKey, TData, TLoader>.Initialize(IDatabase<TKey, TData>)
+  nameWithType.vb: MultiFileDataSource(Of TKey, TData, TLoader).Initialize(IDatabase(Of TKey, TData))
+- uid: RisingV.Shared.Databases.Sources.MultiFileDataSource`3.Initialize*
+  name: Initialize
+  href: api/RisingV.Shared.Databases.Sources.MultiFileDataSource-3.html#RisingV_Shared_Databases_Sources_MultiFileDataSource_3_Initialize_
+  commentId: Overload:RisingV.Shared.Databases.Sources.MultiFileDataSource`3.Initialize
+  isSpec: "True"
+  fullName: RisingV.Shared.Databases.Sources.MultiFileDataSource<TKey, TData, TLoader>.Initialize
+  fullName.vb: RisingV.Shared.Databases.Sources.MultiFileDataSource(Of TKey, TData, TLoader).Initialize
+  nameWithType: MultiFileDataSource<TKey, TData, TLoader>.Initialize
+  nameWithType.vb: MultiFileDataSource(Of TKey, TData, TLoader).Initialize
+- uid: RisingV.Shared.Databases.Sources.MultiFileDataSource`3.Load(RisingV.Shared.Databases.IDatabase{`0,`1},`2)
+  name: Load(IDatabase<TKey, TData>, TLoader)
+  href: api/RisingV.Shared.Databases.Sources.MultiFileDataSource-3.html#RisingV_Shared_Databases_Sources_MultiFileDataSource_3_Load_RisingV_Shared_Databases_IDatabase__0__1___2_
+  commentId: M:RisingV.Shared.Databases.Sources.MultiFileDataSource`3.Load(RisingV.Shared.Databases.IDatabase{`0,`1},`2)
+  name.vb: Load(IDatabase(Of TKey, TData), TLoader)
+  fullName: RisingV.Shared.Databases.Sources.MultiFileDataSource<TKey, TData, TLoader>.Load(RisingV.Shared.Databases.IDatabase<TKey, TData>, TLoader)
+  fullName.vb: RisingV.Shared.Databases.Sources.MultiFileDataSource(Of TKey, TData, TLoader).Load(RisingV.Shared.Databases.IDatabase(Of TKey, TData), TLoader)
+  nameWithType: MultiFileDataSource<TKey, TData, TLoader>.Load(IDatabase<TKey, TData>, TLoader)
+  nameWithType.vb: MultiFileDataSource(Of TKey, TData, TLoader).Load(IDatabase(Of TKey, TData), TLoader)
+- uid: RisingV.Shared.Databases.Sources.MultiFileDataSource`3.Load*
+  name: Load
+  href: api/RisingV.Shared.Databases.Sources.MultiFileDataSource-3.html#RisingV_Shared_Databases_Sources_MultiFileDataSource_3_Load_
+  commentId: Overload:RisingV.Shared.Databases.Sources.MultiFileDataSource`3.Load
+  isSpec: "True"
+  fullName: RisingV.Shared.Databases.Sources.MultiFileDataSource<TKey, TData, TLoader>.Load
+  fullName.vb: RisingV.Shared.Databases.Sources.MultiFileDataSource(Of TKey, TData, TLoader).Load
+  nameWithType: MultiFileDataSource<TKey, TData, TLoader>.Load
+  nameWithType.vb: MultiFileDataSource(Of TKey, TData, TLoader).Load
+- uid: RisingV.Shared.Databases.Sources.MultiFileDataSource`3.Verify(RisingV.Shared.Databases.IDatabase{`0,`1})
+  name: Verify(IDatabase<TKey, TData>)
+  href: api/RisingV.Shared.Databases.Sources.MultiFileDataSource-3.html#RisingV_Shared_Databases_Sources_MultiFileDataSource_3_Verify_RisingV_Shared_Databases_IDatabase__0__1__
+  commentId: M:RisingV.Shared.Databases.Sources.MultiFileDataSource`3.Verify(RisingV.Shared.Databases.IDatabase{`0,`1})
+  name.vb: Verify(IDatabase(Of TKey, TData))
+  fullName: RisingV.Shared.Databases.Sources.MultiFileDataSource<TKey, TData, TLoader>.Verify(RisingV.Shared.Databases.IDatabase<TKey, TData>)
+  fullName.vb: RisingV.Shared.Databases.Sources.MultiFileDataSource(Of TKey, TData, TLoader).Verify(RisingV.Shared.Databases.IDatabase(Of TKey, TData))
+  nameWithType: MultiFileDataSource<TKey, TData, TLoader>.Verify(IDatabase<TKey, TData>)
+  nameWithType.vb: MultiFileDataSource(Of TKey, TData, TLoader).Verify(IDatabase(Of TKey, TData))
+- uid: RisingV.Shared.Databases.Sources.MultiFileDataSource`3.Verify*
+  name: Verify
+  href: api/RisingV.Shared.Databases.Sources.MultiFileDataSource-3.html#RisingV_Shared_Databases_Sources_MultiFileDataSource_3_Verify_
+  commentId: Overload:RisingV.Shared.Databases.Sources.MultiFileDataSource`3.Verify
+  isSpec: "True"
+  fullName: RisingV.Shared.Databases.Sources.MultiFileDataSource<TKey, TData, TLoader>.Verify
+  fullName.vb: RisingV.Shared.Databases.Sources.MultiFileDataSource(Of TKey, TData, TLoader).Verify
+  nameWithType: MultiFileDataSource<TKey, TData, TLoader>.Verify
+  nameWithType.vb: MultiFileDataSource(Of TKey, TData, TLoader).Verify
 - uid: RisingV.Shared.Diagnostics
   name: RisingV.Shared.Diagnostics
   href: api/RisingV.Shared.Diagnostics.html

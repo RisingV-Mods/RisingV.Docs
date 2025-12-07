@@ -910,6 +910,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Shared.Databases.Sources.MultiFileDataSource-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Shared.Databases.Sources.MultiFileDataSource-3.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Shared.Databases.Sources.MultiFileDataSource<TKey, TData, TLoader>",
+      "Summary": "<p sourcefile=\"api/RisingV.Shared.Databases.Sources.MultiFileDataSource-3.yml\" sourcestartlinenumber=\"1\">Represents a multi-file data source that scans all plugin directories for matching database files and merges them.\nFiles are loaded in alphabetical order by plugin name, with later files overwriting earlier ones on key conflicts.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/RisingV.Shared.Databases.Sources.yml",
       "output": {
         ".html": {
